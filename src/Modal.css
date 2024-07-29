@@ -1,0 +1,38 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .notification {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 300px;
+    background: lightblue;
+  }
+  
+  .validate {
+    border: 2px solid green;
+  }
+  
+  .alert {
+    border: 2px solid orange;
+  }
+  
+  .error {
+    border: 2px solid red;
+  }
+  
