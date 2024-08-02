@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import './Modal.css'; // Si vous avez des styles CSS
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Modal.css';
 
-const Modal = ({ isOpen, setIsOpen, corpsHtml, text, isNotification, typeNotification, autoClose }) => {
+const Modal = ({ isOpen, setIsOpen, corpsHtml, text }) => {
   if (!isOpen) return null;
 
-  const handleClose = () => setIsOpen(false);
-
-  if (autoClose) {
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 5000); // Ferme après 5 secondes
-  }
-
   return (
-    <div className={`modal ${isNotification ? 'notification' : ''} ${typeNotification}`}>
+    <div className="modal">
       <div className="modal-content">
-        {text ? <p>{text}</p> : corpsHtml}
-        <button onClick={handleClose}>Close</button>
+        {corpsHtml ? corpsHtml : <p>{text}</p>}
+        <button onClick={() => setIsOpen(false)} className="close">Close</button>
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+  corpsHtml: PropTypes.node,
+  text: PropTypes.string
 };
 
 export default Modal;

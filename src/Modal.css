@@ -11,19 +11,22 @@
   }
   
   .modal-content {
-    background: white;
+    background: #93ad18;
     padding: 20px;
     border-radius: 5px;
+    color: white;
   }
   
-  .notification {
-    position: fixed;
-    right: 10px;
-    top: 10px;
-    width: 300px;
-    background: lightblue;
+  .close{
+    text-align: center;
+    background-color: #5a6f07;
+    border: none;
+    border-radius: 15px 10px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
   }
-  
+
   .validate {
     border: 2px solid green;
   }

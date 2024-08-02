@@ -34,7 +34,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'), // Remplacez contentBase par static
+    static: path.resolve(__dirname, 'dist'), 
     port: 3000,
   },
 };
