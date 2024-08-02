@@ -1,7 +1,7 @@
 {
   "name": "modal-rhnet-library-react",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "files": [
     "src",
     "public"
