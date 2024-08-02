@@ -1,0 +1,30 @@
+name: Publish Package
+
+on:
+  push:
+    branches:
+      - main  # Déclenche la publication lorsque vous poussez sur la branche principale
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Spécifiez la version de Node.js
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build the package
+        run: yarn build
+
+      - name: Publish to GitHub Packages
+        run: yarn publish --non-interactive
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -14,9 +14,7 @@ const Example = () => {
   return (
     <div>
       <h1>Modal Library</h1>
-      <button onClick={() => {
-        setIsOpenClassic(true);
-      }}>Ouvrir la modale</button>
+      <button onClick={() => setIsOpenClassic(true)}>Ouvrir la modale</button>
 
       <Modal 
         isOpen={isOpenClassic} 
