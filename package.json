@@ -1,6 +1,6 @@
 {
   "name": "modal-rhnet-library-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -40,5 +40,12 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "description": "modal",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Bayou76/modal-rhnet-library-react.git"
+},
+  "author": "baya <sebia.baya@outlook.com>",
+  "license": "MIT"
 }
